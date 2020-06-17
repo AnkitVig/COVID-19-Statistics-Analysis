@@ -1,5 +1,88 @@
-<div class="container-fluid" style="margin-top: 20px ;">
+<head>
 
+<style>
+
+html {
+  scroll-behavior: smooth;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #2a3241;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+</style>
+</head>
+
+
+<div class="topnav" id="myTopnav"  >
+  <a href=".">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+ </div>
+
+<div style="padding-left:16px">
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+
+<div class="container-fluid" >
    <div class="col-xl-3" style="margin-left: 450px;">
       <div class=" text-center" style="margin-bottom: 50px;">
         <h5 style="color: black">COVID-19 Pandemic Started</h5>
@@ -32,7 +115,6 @@
 
     </div><!-- end col -->
   <div class="row" style=" margin-top: 50px;">
-
     <div  style="margin-left: 50px;  margin-top: 20px;" class="col-xl-3 col-md-6 col-6">
       <div >
         <h1 class="text-center" style="color: black">Total Deaths</h1>
@@ -103,10 +185,16 @@
 
     </div><!-- end col -->
 
+
   </div>
-
-
+<br>
+<br>
+<br>
+<div>
+      <p align="center"> Click on the list of 240 affeted countries below to read the stats and the line chart updated after 24hrs. The timezone used is EST </p>
+</div>
   <div style="margin-top: 70px;" class="row">
+
     <div  class="col-xl-3" >
       <div class="card-box" style="box-shadow: 10px 10px 5px grey;width: 380px;">
         
@@ -130,6 +218,7 @@
                   Cases</span> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  <span class="text-danger">{{country.deaths | number}} Deaths</span></p>
                 
               </a>
+
             </div>
           </perfect-scrollbar>
 
@@ -153,76 +242,263 @@
     </div><!-- end col -->
 </div>
 
-<div id = "scrollToCountry">
-<div *ngIf="edited == 'india'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'usa'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'brazil'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'russia'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'chile'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'venezuela'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'china'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'jamaica'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'zimbawe'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'zambia'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'yemen'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'western sahara'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'vietnam'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'vetican city'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'uzbekistan'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'uruguay'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'ukraine'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'uganda'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'uk'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'uae'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'turks and caicos'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'turkey'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'tunisia'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'thinidad and tobago'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'togo'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'timor-laste'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'thailand'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'tanzania'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'tajakistan'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'taiwan'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'syria'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'switzerland'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'swedan'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'suriname'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'sudan'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'st. vincent grenadines'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'st. barth'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'sri lanka'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'spain'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'south sudan'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'south africa'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'somalia'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'slovenia'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'slovakia'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'sint maarten'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'singapore'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'sierra leone'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'seychelles'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'afghanistan'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'africa'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'albania'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'algeria'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'americas'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'andorra'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'angola'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'anguilla'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'antigua and barbuda'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'argentina'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'amenia'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'aruba'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'asia'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'australia'"><app-country  myname={{edited}} ></app-country></div>
-<div *ngIf="edited == 'austria'"><app-country  myname={{edited}} ></app-country></div>
+<p align="center"> The charts and the stats are updated after the close of the day </p>
 
+<div id = "scrollToCountry">
+<div *ngIf="edited == 'usa'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'afghanistan'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'albania'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'algeria'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'american samoa'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'andorra'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'angola'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'anguilla'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'antarctica'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'antigua and barbuda'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'argentina'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'armenia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'aruba'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'australia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'austria'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'azerbaijan'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'bahamas'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'bahrain'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'bangladesh'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'barbados'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'belarus'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'belgium'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'belize'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'benin'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'bermuda'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'bhutan'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'bolivia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'bosnia and herzegovina'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'botswana'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'bouvet island'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'brazil'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'british indian ocean territory'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'brunei'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'bulgaria'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'burkina faso'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'burundi'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'cambodia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'cameroon'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'canada'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'cape verde'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'cayman islands'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'central african republic'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'chad'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'chile'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'china'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'christmas island'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'cocos (keeling) islands'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'colombia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'comoros'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'congo'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'drc'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'cook islands'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'costa rica'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'ivory coast'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'croatia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'cuba'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'cyprus'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'czechia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'denmark'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'djibouti'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'dominica'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'dominican republic'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'ecuador'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'egypt'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'el salvador'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'equatorial guinea'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'eritrea'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'estonia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'ethiopia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'falkland islands'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'faeroe islands'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'fiji'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'finland'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'france'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'french guiana'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'french polynesia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'french southern territories'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'gabon'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'gambia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'georgia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'germany'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'ghana'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'gibraltar'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'greece'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'greenland'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'grenada'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'guadeloupe'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'guam'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'guatemala'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'guernsey'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'guinea'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'guinea-bissau'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'guyana'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'haiti'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'heard island & mcdonald islands'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'holy see (vatican city state)'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'honduras'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'hong kong'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'hungary'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'iceland'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'india'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'indonesia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'iran'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'iraq'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'ireland'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'isle of man'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'israel'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'italy'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'jamaica'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'japan'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'channel islands'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'jordan'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'kazakhstan'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'kenya'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'kiribati'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'korea'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 's. korea'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'kuwait'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'kyrgyzstan'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'lao people\'s democratic republic'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'latvia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'lebanon'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'lesotho'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'liberia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'libyan arab jamahiriya'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'liechtenstein'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'lithuania'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'luxembourg'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'macao'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'macedonia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'madagascar'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'malawi'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'malaysia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'maldives'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'mali'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'malta'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'marshall islands'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'martinique'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'mauritania'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'mauritius'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'mayotte'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'mexico'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'micronesia, federated states of'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'moldova'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'monaco'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'mongolia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'montenegro'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'montserrat'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'morocco'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'mozambique'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'myanmar'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'namibia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'nauru'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'nepal'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'netherlands'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'netherlands antilles'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'new caledonia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'new zealand'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'nicaragua'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'niger'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'nigeria'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'niue'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'norfolk island'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'north macedonia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'norway'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'oman'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'pakistan'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'palau'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'palestine'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'panama'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'papua new guinea'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'paraguay'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'peru'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'philippines'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'pitcairn'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'poland'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'portugal'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'puerto rico'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'qatar'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'réunion'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'romania'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'russia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'rwanda'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'saint barthelemy'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'st. barth'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'saint helena'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'saint kitts and nevis'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'saint lucia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'saint martin'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'saint pierre and miquelon'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'st. vincent grenadines'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'samoa'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'san marino'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'sao tome and principe'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'saudi arabia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'senegal'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'serbia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'seychelles'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'sierra leone'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'singapore'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'slovakia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'slovenia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'solomon islands'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'somalia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'south africa'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'south georgia and sandwich isl'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'spain'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'sri lanka'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'sudan'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'suriname'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'svalbard and jan mayen'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'swaziland'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'sweden'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'switzerland'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'syrian arab republic'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'taiwan'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'tajikistan'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'tanzania'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'thailand'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'timor-leste'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'togo'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'tokelau'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'tonga'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'trinidad and tobago'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'tunisia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'turkey'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'turkmenistan'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'turks and caicos islands'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'tuvalu'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'uganda'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'ukraine'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'uae'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'uk'"><app-country  myname={{edited}} ></app-country></div>  
+<div *ngIf="edited == 'united states outlying islands'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'uruguay'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'uzbekistan'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'vanuatu'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'venezuela'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'vietnam'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'virgin islands, british'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'u.s. virgin islands'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'wallis and futuna'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'western sahara'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'yemen'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'zambia'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'zimbabwe'"><app-country  myname={{edited}} ></app-country></div> 
+<div *ngIf="edited == 'curaçao'"><app-country  myname={{edited}} ></app-country></div> 
 
 
 </div>
 
-<div style="margin-top: 100px;" class="row">
+<br>
+<div style="margin-top: 100px;" class="row col-xl-12"id ="news">
+    <div class="col-xl-12"> <h1 style ="color: black" align="center">Latest News</h1> </div>
     <div class="col-xl-6">
 <div class ="card-box" style=" box-shadow: 10px 10px 5px grey;">
           <h4 style="color: #002880;">Title : {{title1}}</h4>
@@ -263,3 +539,6 @@
  
 
 </div> <!-- end container -->
+<div id ="contact">
+
+  </div>

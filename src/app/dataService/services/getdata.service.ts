@@ -12,7 +12,7 @@ export class GetdataService {
 
   constructor(private _http: HttpClient) { }
   private host = "https://api.coronastatistics.live";
-    private news_host = "https://gnews.io/api/v3/search?q=covid&token=09e59a0a7d36c9f105de1a5a645b566e&max=4";
+    private news_host = "https://gnews.io/api/v3/search?q=Corona&token=6cdf506be857c09d619844c665f70ac5&max=4";
 private messageEvent = new BehaviorSubject<any>({});
 getCountryName = this.messageEvent.asObservable();
 
