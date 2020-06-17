@@ -1,0 +1,22 @@
+//Core files
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "variables";
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+//Components
+@import "covid-scss/components/accordions";
+@import "covid-scss/components/badge";
+@import "covid-scss/components/backgrounds";
+@import "covid-scss/components/breadcrumb";
+@import "covid-scss/components/buttons";
+@import "covid-scss/components/card";
+@import "covid-scss/components/dropdown";
+@import "covid-scss/components/forms";
+@import "covid-scss/components/modal";
+@import "covid-scss/components/nav";
+@import "covid-scss/components/popover";
+@import "covid-scss/components/progress";
+@import "covid-scss/components/reboot";
+@import "covid-scss/components/tables";
+@import "covid-scss/components/type";

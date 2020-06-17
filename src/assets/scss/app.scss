@@ -1,0 +1,21 @@
+//Fonts
+@import "covid-scss/fonts/fonts";
+
+
+//Core files
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "variables";
+@import "./node_modules/bootstrap/scss/mixins.scss";
+
+// Structure
+@import "covid-scss/structure/general";
+@import "covid-scss/structure/horizontal-nav";
+@import "covid-scss/structure/topbar";
+@import "covid-scss/structure/footer";
+
+//Components
+@import "covid-scss/components/widgets";
+
+// Plugins
+@import "covid-scss/plugins/waves";
