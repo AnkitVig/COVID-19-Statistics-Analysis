@@ -1,0 +1,18 @@
+//
+// forms.scss
+//
+
+// Form-control light
+.form-control-light {
+    background-color: #ffffff;
+    border-color: $gray-100;
+}
+
+
+// Form elements (Color and Range)
+input.form-control[type="color"],
+input.form-control[type="range"] {
+    min-height: 39px;
+}
+
+

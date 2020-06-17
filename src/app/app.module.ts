@@ -16,7 +16,7 @@ import { PerfectScrollbarModule, PerfectScrollbarConfigInterface,PERFECT_SCROLLB
 import { HeaderComponent } from './layouts/header/header.component';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { FooterComponent } from './layouts/footer/footer.component';
-import { MainComponent } from './pages/main/main.component';
+import { MainPageComponent } from './pages/mainPage/mainPage.component';
 import { CountryComponent } from './pages/country/country.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
@@ -34,7 +34,7 @@ export function HttpLoaderFactory(http: HttpClient){
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent,HeaderComponent, NavbarComponent, FooterComponent, MainComponent, CountryComponent, DaysComponent
+    LayoutComponent,HeaderComponent, NavbarComponent, FooterComponent, MainPageComponent, CountryComponent, DaysComponent
   ],
   imports: [
     BrowserModule,
