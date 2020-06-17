@@ -3,4 +3,4 @@
 node_modules/
 *.css linguist-detectable=false
 *.ts linguist-detectable=true
-*.html linguist-detectable=true
+*.html linguist-detectable=false
