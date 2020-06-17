@@ -1,5 +1,5 @@
 # COVID-19-Statistics-Analysis
-The Application is created using Angular(. Catch the latest news and stats here 
+The Application is created using Angular9. Catch the latest news and stats here 
 ## https://ankitvig.github.io/COVID-19-Statistics-Analysis/
 
 
