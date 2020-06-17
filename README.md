@@ -1,5 +1,6 @@
 # COVID-19-Statistics-Analysis
-The Application is created using
+The Application is created using Angular(. Catch the latest news and stats here 
+## https://ankitvig.github.io/COVID-19-Statistics-Analysis/
 
 
 ## Cloning the project
