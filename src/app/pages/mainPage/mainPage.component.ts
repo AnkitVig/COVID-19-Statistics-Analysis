@@ -225,10 +225,10 @@ getNews(){
      this.title2 = data.articles[1].title;
      this.title3 = data.articles[2].title;
      this.title4 = data.articles[3].title;
-     this.img1 = data.articles[0].urlToImage;
-     this.img2 = data.articles[1].urlToImage;
-     this.img3 = data.articles[2].urlToImage;
-     this.img4 = data.articles[3].urlToImage;
+     this.img1 = data.articles[0].image;
+     this.img2 = data.articles[1].image;
+     this.img3 = data.articles[2].image;
+     this.img4 = data.articles[3].image;
      this.url1 = data.articles[0].url;
      this.url2 = data.articles[1].url;
      this.url3 = data.articles[2].url;

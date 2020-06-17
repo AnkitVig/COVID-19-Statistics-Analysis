@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1592374643355,
+  "timestamp": 1592374988495,
   "index": "/COVID-19-Statistics-Analysis/index.html",
   "assetGroups": [
     {
@@ -11,8 +11,8 @@
         "/COVID-19-Statistics-Analysis/canvg-es2015.cca86741a519411c54df.js",
         "/COVID-19-Statistics-Analysis/canvg-es5.cca86741a519411c54df.js",
         "/COVID-19-Statistics-Analysis/index.html",
-        "/COVID-19-Statistics-Analysis/main-es2015.a6cf629f628456366c70.js",
-        "/COVID-19-Statistics-Analysis/main-es5.a6cf629f628456366c70.js",
+        "/COVID-19-Statistics-Analysis/main-es2015.b92925124b0d5516c5f0.js",
+        "/COVID-19-Statistics-Analysis/main-es5.b92925124b0d5516c5f0.js",
         "/COVID-19-Statistics-Analysis/manifest.webmanifest",
         "/COVID-19-Statistics-Analysis/pdfmake-es2015.77b4669b4720205fecfa.js",
         "/COVID-19-Statistics-Analysis/pdfmake-es5.77b4669b4720205fecfa.js",
@@ -198,9 +198,9 @@
     "/COVID-19-Statistics-Analysis/fa-solid-900.82905d8d1c06969df11c.svg": "a24f75395c61216cb50d17e9c1d159984a464097",
     "/COVID-19-Statistics-Analysis/fa-solid-900.b5596f4d339f99e3d69b.eot": "6275300c533b525bd590a7e8190ee00c67928313",
     "/COVID-19-Statistics-Analysis/fa-solid-900.b70cea0339374107969e.ttf": "3f760416638f6459ade7251b80fd7bc27d6ad1c6",
-    "/COVID-19-Statistics-Analysis/index.html": "6551200e2b80df402dcf4e45ccc74cb1ae3c02f7",
-    "/COVID-19-Statistics-Analysis/main-es2015.a6cf629f628456366c70.js": "7a6e9e3917e2d09a890cb07f05f6cef2386be675",
-    "/COVID-19-Statistics-Analysis/main-es5.a6cf629f628456366c70.js": "e1cf4d1f9132c5a980891b973cab280ae8d187bf",
+    "/COVID-19-Statistics-Analysis/index.html": "b8cca16640916b4ac4d7217af2175f57412b2c43",
+    "/COVID-19-Statistics-Analysis/main-es2015.b92925124b0d5516c5f0.js": "5ea2747437b0bed22f92eaf5bb9af7a2e14a166e",
+    "/COVID-19-Statistics-Analysis/main-es5.b92925124b0d5516c5f0.js": "10799ee80b81062c43db8997ec16952f9be0f34e",
     "/COVID-19-Statistics-Analysis/manifest.webmanifest": "889f5b1daa74b03f8f14543df5212e4edb89581a",
     "/COVID-19-Statistics-Analysis/materialdesignicons-webfont.032eb679a327d4668d75.svg": "ff5dc2b17d87d2332798ff79cb34f3fdc4b9b9ee",
     "/COVID-19-Statistics-Analysis/materialdesignicons-webfont.1993c4a16cce5446a5cf.eot": "f4ac13a1db2e75cc443950454205493237da7694",
