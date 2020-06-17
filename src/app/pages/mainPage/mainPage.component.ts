@@ -221,18 +221,18 @@ public myVal : any;
 
 getNews(){
     this._getDataService.getAllNews().subscribe((data: {}) => {
-     //  this.title1 = data.articles[0].title;
-     // this.title2 = data.articles[1].title;
-     // this.title3 = data.articles[2].title;
-     // this.title4 = data.articles[3].title;
-     // this.img1 = data.articles[0].urlToImage;
-     // this.img2 = data.articles[1].urlToImage;
-     // this.img3 = data.articles[2].urlToImage;
-     // this.img4 = data.articles[3].urlToImage;
-     // this.url1 = data.articles[0].url;
-     // this.url2 = data.articles[1].url;
-     // this.url3 = data.articles[2].url;
-     // this.url4 = data.articles[3].url;
+      this.title1 = data.articles[0].title;
+     this.title2 = data.articles[1].title;
+     this.title3 = data.articles[2].title;
+     this.title4 = data.articles[3].title;
+     this.img1 = data.articles[0].urlToImage;
+     this.img2 = data.articles[1].urlToImage;
+     this.img3 = data.articles[2].urlToImage;
+     this.img4 = data.articles[3].urlToImage;
+     this.url1 = data.articles[0].url;
+     this.url2 = data.articles[1].url;
+     this.url3 = data.articles[2].url;
+     this.url4 = data.articles[3].url;
     });
   }
 
