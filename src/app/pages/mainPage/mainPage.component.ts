@@ -220,7 +220,7 @@ public myVal : any;
   }
 
 getNews(){
-    this._getDataService.getAllNews().subscribe((data: {}) => {
+    this._getDataService.getAllNews().subscribe((data: any) => {
       this.title1 = data.articles[0].title;
      this.title2 = data.articles[1].title;
      this.title3 = data.articles[2].title;
